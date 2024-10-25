@@ -1,4 +1,4 @@
-﻿namespace AplicativoComVariasJanelas
+﻿namespace AplicativoComMultiplasJanelas
 {
     partial class FormNovoProduto
     {
@@ -28,129 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelNome = new Label();
-            labelFabricante = new Label();
-            labelPrecoCompra = new Label();
-            labelPrecoVenda = new Label();
+            labelNomeDoProduto = new Label();
             textBoxNome = new TextBox();
+            labelFabricante = new Label();
             textBoxFabricante = new TextBox();
+            labelPrecodeCompra = new Label();
+            labelPrecoVenda = new Label();
             numericUpDownPrecoCompra = new NumericUpDown();
             numericUpDownPrecoVenda = new NumericUpDown();
-            buttonOK = new Button();
-            buttonCancelar = new Button();
+            ButtonOk = new Button();
+            ButtonCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDownPrecoCompra).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownPrecoVenda).BeginInit();
             SuspendLayout();
             // 
-            // labelNome
+            // labelNomeDoProduto
             // 
-            labelNome.AutoSize = true;
-            labelNome.Location = new Point(12, 26);
-            labelNome.Name = "labelNome";
-            labelNome.Size = new Size(132, 20);
-            labelNome.TabIndex = 0;
-            labelNome.Text = "Nome do Produto:";
+            labelNomeDoProduto.AutoSize = true;
+            labelNomeDoProduto.BackColor = SystemColors.ActiveCaption;
+            labelNomeDoProduto.Location = new Point(12, 9);
+            labelNomeDoProduto.Name = "labelNomeDoProduto";
+            labelNomeDoProduto.Size = new Size(106, 15);
+            labelNomeDoProduto.TabIndex = 0;
+            labelNomeDoProduto.Text = "Nome do Produto:";
+            // 
+            // textBoxNome
+            // 
+            textBoxNome.BackColor = Color.FromArgb(255, 255, 192);
+            textBoxNome.Location = new Point(124, 6);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(120, 23);
+            textBoxNome.TabIndex = 1;
             // 
             // labelFabricante
             // 
             labelFabricante.AutoSize = true;
-            labelFabricante.Location = new Point(12, 86);
+            labelFabricante.BackColor = SystemColors.ActiveCaption;
+            labelFabricante.Location = new Point(12, 46);
             labelFabricante.Name = "labelFabricante";
-            labelFabricante.Size = new Size(80, 20);
-            labelFabricante.TabIndex = 1;
+            labelFabricante.Size = new Size(65, 15);
+            labelFabricante.TabIndex = 2;
             labelFabricante.Text = "Fabricante:";
             // 
-            // labelPrecoCompra
+            // textBoxFabricante
             // 
-            labelPrecoCompra.AutoSize = true;
-            labelPrecoCompra.Location = new Point(12, 142);
-            labelPrecoCompra.Name = "labelPrecoCompra";
-            labelPrecoCompra.Size = new Size(127, 20);
-            labelPrecoCompra.TabIndex = 2;
-            labelPrecoCompra.Text = "Preço de Compra:\r\n";
+            textBoxFabricante.BackColor = Color.FromArgb(255, 255, 192);
+            textBoxFabricante.Location = new Point(124, 46);
+            textBoxFabricante.Name = "textBoxFabricante";
+            textBoxFabricante.Size = new Size(120, 23);
+            textBoxFabricante.TabIndex = 3;
+            // 
+            // labelPrecodeCompra
+            // 
+            labelPrecodeCompra.AutoSize = true;
+            labelPrecodeCompra.BackColor = SystemColors.ActiveCaption;
+            labelPrecodeCompra.Location = new Point(12, 87);
+            labelPrecodeCompra.Name = "labelPrecodeCompra";
+            labelPrecodeCompra.Size = new Size(102, 15);
+            labelPrecodeCompra.TabIndex = 4;
+            labelPrecodeCompra.Text = "Preço de Compra:";
             // 
             // labelPrecoVenda
             // 
             labelPrecoVenda.AutoSize = true;
-            labelPrecoVenda.Location = new Point(13, 213);
+            labelPrecoVenda.BackColor = SystemColors.ActiveCaption;
+            labelPrecoVenda.Location = new Point(12, 129);
             labelPrecoVenda.Name = "labelPrecoVenda";
-            labelPrecoVenda.Size = new Size(115, 20);
-            labelPrecoVenda.TabIndex = 3;
+            labelPrecoVenda.Size = new Size(91, 15);
+            labelPrecoVenda.TabIndex = 6;
             labelPrecoVenda.Text = "Preço de Venda:";
-            // 
-            // textBoxNome
-            // 
-            textBoxNome.Location = new Point(186, 23);
-            textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(150, 27);
-            textBoxNome.TabIndex = 4;
-            // 
-            // textBoxFabricante
-            // 
-            textBoxFabricante.Location = new Point(186, 80);
-            textBoxFabricante.Name = "textBoxFabricante";
-            textBoxFabricante.Size = new Size(150, 27);
-            textBoxFabricante.TabIndex = 5;
             // 
             // numericUpDownPrecoCompra
             // 
+            numericUpDownPrecoCompra.BackColor = Color.FromArgb(255, 255, 192);
             numericUpDownPrecoCompra.DecimalPlaces = 2;
             numericUpDownPrecoCompra.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numericUpDownPrecoCompra.Location = new Point(186, 142);
+            numericUpDownPrecoCompra.Location = new Point(124, 85);
             numericUpDownPrecoCompra.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownPrecoCompra.Name = "numericUpDownPrecoCompra";
-            numericUpDownPrecoCompra.Size = new Size(150, 27);
-            numericUpDownPrecoCompra.TabIndex = 6;
+            numericUpDownPrecoCompra.Size = new Size(120, 23);
+            numericUpDownPrecoCompra.TabIndex = 8;
             numericUpDownPrecoCompra.TextAlign = HorizontalAlignment.Right;
             // 
             // numericUpDownPrecoVenda
             // 
+            numericUpDownPrecoVenda.BackColor = Color.FromArgb(255, 255, 192);
             numericUpDownPrecoVenda.DecimalPlaces = 2;
             numericUpDownPrecoVenda.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numericUpDownPrecoVenda.Location = new Point(186, 206);
+            numericUpDownPrecoVenda.Location = new Point(124, 121);
             numericUpDownPrecoVenda.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownPrecoVenda.Name = "numericUpDownPrecoVenda";
-            numericUpDownPrecoVenda.Size = new Size(150, 27);
-            numericUpDownPrecoVenda.TabIndex = 7;
+            numericUpDownPrecoVenda.Size = new Size(120, 23);
+            numericUpDownPrecoVenda.TabIndex = 9;
             numericUpDownPrecoVenda.TextAlign = HorizontalAlignment.Right;
             // 
-            // buttonOK
+            // ButtonOk
             // 
-            buttonOK.Location = new Point(369, 251);
-            buttonOK.Name = "buttonOK";
-            buttonOK.Size = new Size(94, 29);
-            buttonOK.TabIndex = 8;
-            buttonOK.Text = "OK";
-            buttonOK.UseVisualStyleBackColor = true;
-            buttonOK.Click += buttonOK_Click;
+            ButtonOk.BackColor = SystemColors.ActiveCaption;
+            ButtonOk.Location = new Point(288, 152);
+            ButtonOk.Name = "ButtonOk";
+            ButtonOk.Size = new Size(75, 23);
+            ButtonOk.TabIndex = 10;
+            ButtonOk.Text = "Ok";
+            ButtonOk.UseVisualStyleBackColor = false;
+            ButtonOk.Click += ButtonOk_Click;
             // 
-            // buttonCancelar
+            // ButtonCancelar
             // 
-            buttonCancelar.Location = new Point(481, 251);
-            buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(94, 29);
-            buttonCancelar.TabIndex = 9;
-            buttonCancelar.Text = "Cancelar";
-            buttonCancelar.UseVisualStyleBackColor = true;
-            buttonCancelar.Click += buttonCancelar_Click;
+            ButtonCancelar.BackColor = Color.FromArgb(255, 192, 192);
+            ButtonCancelar.Location = new Point(369, 152);
+            ButtonCancelar.Name = "ButtonCancelar";
+            ButtonCancelar.Size = new Size(75, 23);
+            ButtonCancelar.TabIndex = 11;
+            ButtonCancelar.Text = "Cancelar";
+            ButtonCancelar.UseVisualStyleBackColor = false;
+            ButtonCancelar.Click += ButtonCancelar_Click;
             // 
             // FormNovoProduto
             // 
-            AcceptButton = buttonOK;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AcceptButton = ButtonOk;
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = buttonCancelar;
-            ClientSize = new Size(648, 310);
-            Controls.Add(buttonCancelar);
-            Controls.Add(buttonOK);
+            CancelButton = ButtonCancelar;
+            ClientSize = new Size(459, 180);
+            Controls.Add(ButtonCancelar);
+            Controls.Add(ButtonOk);
             Controls.Add(numericUpDownPrecoVenda);
             Controls.Add(numericUpDownPrecoCompra);
-            Controls.Add(textBoxFabricante);
-            Controls.Add(textBoxNome);
             Controls.Add(labelPrecoVenda);
-            Controls.Add(labelPrecoCompra);
+            Controls.Add(labelPrecodeCompra);
+            Controls.Add(textBoxFabricante);
             Controls.Add(labelFabricante);
-            Controls.Add(labelNome);
+            Controls.Add(textBoxNome);
+            Controls.Add(labelNomeDoProduto);
             Name = "FormNovoProduto";
             Text = "FormNovoProduto";
             ((System.ComponentModel.ISupportInitialize)numericUpDownPrecoCompra).EndInit();
@@ -161,15 +171,16 @@
 
         #endregion
 
-        private Label labelNome;
-        private Label labelFabricante;
-        private Label labelPrecoCompra;
-        private Label labelPrecoVenda;
+        private Label labelNomeDoProduto;
         private TextBox textBoxNome;
+        private Label labelFabricante;
         private TextBox textBoxFabricante;
+        private Label labelPrecodeCompra;
+        private Label labelPrecoVenda;
+        private TextBox textBox4;
         private NumericUpDown numericUpDownPrecoCompra;
         private NumericUpDown numericUpDownPrecoVenda;
-        private Button buttonOK;
-        private Button buttonCancelar;
+        private Button ButtonOk;
+        private Button ButtonCancelar;
     }
 }

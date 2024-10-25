@@ -1,4 +1,4 @@
-namespace AplicativoComVariasJanelas
+namespace AplicativoComMultiplasJanelas
 {
     internal static class Program
     {
