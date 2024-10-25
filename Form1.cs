@@ -98,11 +98,41 @@ namespace AplicativoComMultiplasJanelas
 
         private void buttonDeletarFornecedor_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.DataSource == Fornecedores)
+            if (dataGridView1.DataSource == Fornecedores)
             {
-                if(dataGridView1.SelectedRows.Count > 0)
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
                     Fornecedores.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                }
+            }
+        }
+
+        private void buttonAdicionarCliente_Click(object sender, EventArgs e)
+        {
+            FormNovoCliente fnc = new FormNovoCliente();
+            var resultado = fnc.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Cliente cliente = new Cliente();
+
+                if (Clientes.Count == 0) cliente.Id = 1;
+                else cliente.Id = Clientes.Max(x => x.Id) + 1;
+
+                cliente.Nome = fnc.Nome;
+                cliente.Endereco = fnc.Endereco;
+                cliente.Email = fnc.Email;
+                cliente.Telefone = fnc.Telefone;
+                Clientes.Add(cliente);
+            }
+        }
+
+        private void buttonDeletarCliente_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.DataSource == Clientes)
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    Clientes.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 }
             }
         }
