@@ -263,7 +263,6 @@
             Controls.Add(label1);
             Name = "FormNovoCliente";
             Text = "FormNovoCliente";
-            Load += FormNovoCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }

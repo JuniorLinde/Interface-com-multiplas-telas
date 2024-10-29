@@ -119,8 +119,8 @@ namespace AplicativoComMultiplasJanelas
                 else cliente.Id = Clientes.Max(x => x.Id) + 1;
 
                 cliente.Nome = fnc.Nome;
-                cliente.Endereco = fnc.Endereco;
-                cliente.Email = fnc.Email;
+                cliente.EnderecoFisico = fnc.Endereco;
+                cliente.EnderecoEmail = fnc.Email;
                 cliente.Telefone = fnc.Telefone;
                 Clientes.Add(cliente);
             }
@@ -133,6 +133,49 @@ namespace AplicativoComMultiplasJanelas
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     Clientes.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                }
+            }
+        }
+
+        private void buttonAdicionarCompra_Click(object sender, EventArgs e)
+        {
+            if (Fornecedores.Count == 0)
+            {
+                MessageBox.Show("Você Precisa Cadastrar Fornecedores Antes de Efetuar Uma Compra.");
+                return;
+            }
+
+            if (Produtos.Count == 0)
+            {
+                MessageBox.Show("Você Precisa Cadastrar Produtos Antes de Efetuar Uma Compra.")
+            }
+
+            FormNovaCompra fnc = new FormNovaCompra(Fornecedores, Produtos);
+            var resultado = fnc.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Compra compra = new Compra();
+                if (Compras.Count == 0) compra.Id = 1;
+                else compra.Id = Compras.Max(x => x.Id) + 1;
+
+                compra.IdProduto = fnc.IdProduto;
+                compra.IdFornecedor = fnc.IdFornecedor;
+                compra.Quantidade = (int)fnc.Quantidade;
+                compra.Desconto = fnc.Desconto;
+                compra.DataCompra = DateTime.Now;
+
+                Compras.(compra);
+                this.dataGridView1.DataSource = Compras;
+            }
+        }
+
+        private void buttonDeletarCompra_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.DataSource == Compras)
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                   Compras.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 }
             }
         }
